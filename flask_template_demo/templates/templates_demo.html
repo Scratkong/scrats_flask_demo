@@ -25,5 +25,19 @@
      <br/>{{ '%s is %d'| format('name',18) }}  格式化输出
      <br/>{{ '<em>hello</em>' | striptags }} 渲染前把值中所有的HTML标签都去掉
      <br/>{{ 'hello every one '| truncate(9) }} 字符串截断
+
+
+     <h3>列表操作</h3>
+     <p>{{ [1,2,3,4,5,6,7,8]|first }}</p>
+     <p>{{ [1,2,3,4,5,6,7,8]|last }}</p>
+     <p>{{ [1,2,3,4,5,6,7,8]|length }}</p>
+     <p>{{ [1,2,3,4,5,6,7,8]|sum }}</p>
+     <p>{{ [5,2,6,3,1,4]|sort }}</p>
+
+     <h3>语句块过滤</h3>
+     {%  filter upper %}
+         I heard that you settled down and you found a girl and you marry now-ao-ao
+         I heard that you dread cames true.
+     {% endfilter %}
 </body>
 </html>
