@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     my  templates contents
+     <br/>{{ my_str }}
+     <br/>{{ my_int }}
+     <br/>{{ my_array }}
+     <br/>{{ my_dict }}
+     <br/>my_int996 + 10 的和：{{ my_int + 10 }}
+     <br/>my_array 第0个值为： {{ my_array[0] }}
+     <br/>my_dict 中name的值为： {{ my_dict['name'] }}
+     <br/><p>链式调用</p>
+     <br/>{{ 'hello world'|reverse|upper }}
+     <br/><p>禁用转义</p>
+     <br/><p>{{ '<em>hello</em>'|safe }}</p>
+     <br/><p>首字母大写</p>
+     <br/>{{ 'hello'|capitalize }}
+     <br/>{{ 'HELLO'|lower }}  转小写  同理 upper 转大写
+     <br/>{{ 'hello flask'|title }}  每个单词首字母都大写
+     <br/>{{ 'hello' | reverse  }}  字符串反转
+     <br/>{{ '%s is %d'| format('name',18) }}  格式化输出
+     <br/>{{ '<em>hello</em>' | striptags }} 渲染前把值中所有的HTML标签都去掉
+     <br/>{{ 'hello every one '| truncate(9) }} 字符串截断
+</body>
+</html>
