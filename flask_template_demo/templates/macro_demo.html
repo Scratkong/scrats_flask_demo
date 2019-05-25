@@ -1,0 +1,14 @@
+
+<p>定义宏</p>
+{% macro function(name, value =' ', type = 'text') %}
+   <input type="{{ type }}" name = "{{ name }}"
+          value = "{{ value }}" class = "from-control">
+{% endmacro %}
+<!--
+<p>调用宏</p>
+{# {{ input('name' ,value ='sk')}}  #}
+-->
+<!--
+   在其他模板中先导入 再调用
+   {#  {% import 'macro.html' as func %} #}
+   {#  {% func.function() %} #}

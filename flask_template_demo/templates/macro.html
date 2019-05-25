@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   {% macro input(label="", type="text", name="", value="") %}
+   <label>{{ label  }}</label> <input type = "{{ type }}" name ="{{ name }}"  value = "{{ value }}">
+   {% endmacro %}
+
+   <form>
+       {{  input('用户名', name='username') }}<br/>
+       {{  input('身份证号', name='idcard') }}<br/>
+       {{  input('密码', type='password', name='password')}}<br/>
+       {{  input('确认密码', type='password', name='password2') }}<br/>
+       {{  input(type='submit', value='注册')}}
+   </form>
+</body>
+</html>

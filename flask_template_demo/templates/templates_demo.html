@@ -45,5 +45,26 @@
      <br/>my_array 反转： {{ my_array | lireverse }}
 
 
+     <h3>控制代码块</h3>
+     {% if user.is_logged_in()  %}
+        <a href="/logout">logout</a>
+     {% else %}
+        <a href = '/login'>login</a>
+     {% endif %}
+
+     <p>过滤器可以放在if中</p>
+     {% if comments | length >0  %}
+        there are {{  comments | length  }} comments
+     {% else %}
+        there are no comments
+     {% endif %}
+
+     {% for post in posts %}
+        <div>
+            <h1>{{ post.title }}</h1>
+            <p>{{ post.test | safe }}</p>
+        </div>
+     {% endfor %}
+
 </body>
 </html>
